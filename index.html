@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjectPulse</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/4362cf1d27.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid app">
+        <header class="app__header">
+            <h1 class="app__title">ProjectPulse</h1>
+        </header>
+        <main class="app__main">
+            <div class="project__form">
+                <h2 class="project__form-title">Gestión de Proyectos</h2>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCreateProject">
+                    <i class="fas fa-plus"></i> Crear Proyecto
+                </button>
+            </div>
+            <div id="project-list" class="mt-4"></div>
+        </main>
+        <footer class="app__footer text-center py-3">
+            <p>&copy; 2024 ProjectPulse. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <!-- Modal para Crear/Editar Proyectos -->
+    <div class="modal fade" id="modalCreateProject" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Crear Proyecto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-create-project">
+                        <div class="mb-3">
+                            <label for="project-name" class="form-label">Nombre del Proyecto</label>
+                            <input type="text" id="project-name" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="project-description" class="form-label">Descripción</label>
+                            <textarea id="project-description" class="form-control" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="project-leader" class="form-label">Líder del Equipo</label>
+                            <input type="text" id="project-leader" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="project-deadline" class="form-label">Fecha de Entrega</label>
+                            <input type="date" id="project-deadline" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-success">Guardar Proyecto</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Crear/Editar Tareas -->
+    <div class="modal fade" id="modalManageTask" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Gestionar Tarea</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-manage-task">
+                        <div class="mb-3">
+                            <label for="task-title" class="form-label">Título</label>
+                            <input type="text" id="task-title" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="task-person" class="form-label">Responsable</label>
+                            <input type="text" id="task-person" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="task-description" class="form-label">Descripción</label>
+                            <textarea id="task-description" class="form-control" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="task-deadline" class="form-label">Fecha Límite</label>
+                            <input type="date" id="task-deadline" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-success">Guardar Tarea</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

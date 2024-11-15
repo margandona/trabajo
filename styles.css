@@ -1,0 +1,223 @@
+/* General */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.app__header {
+    background-color: #343a40;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.app__title {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.app__main {
+    flex: 1;
+    padding: 2rem;
+    background-color: #e9ecef;
+}
+
+.app__footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Project Form */
+.project__form-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #343a40;
+}
+
+.form__label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.form__input {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    font-size: 1rem;
+}
+
+/* Cards */
+.card {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #495057;
+}
+
+.card-text {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+/* Task States */
+.task-status-select {
+    width: 150px;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    transition: all 0.2s ease;
+}
+
+.task-status-select:hover {
+    border-color: #007bff;
+}
+
+.task-pendiente {
+    background-color: #f8d7da; /* Light Red */
+    border-left: 4px solid #dc3545;
+}
+
+.task-pausada {
+    background-color: #fff3cd; /* Light Yellow */
+    border-left: 4px solid #ffc107;
+}
+
+.task-en-ejecucion {
+    background-color: #d4edda; /* Light Green */
+    border-left: 4px solid #28a745;
+}
+
+.task-terminada {
+    background-color: #cce5ff; /* Light Blue */
+    border-left: 4px solid #007bff;
+}
+
+/* Modals */
+.modal-content {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    background-color: #343a40;
+    color: white;
+    border-bottom: none;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 2rem;
+    font-size: 1rem;
+    color: #495057;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+    transform: scale(1.05);
+}
+
+/* Task Container */
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.task-item:hover {
+    transform: translateY(-2px);
+    background-color: #f8f9fa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .app__main {
+        padding: 1rem;
+    }
+
+    .task-status-select {
+        width: 100%;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+}
